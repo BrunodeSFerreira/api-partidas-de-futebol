@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,6 +19,9 @@ public class Clube {
     private EstadosBrasileiros estadosBrasileiros;
     private LocalDate dataCriacao;
     private boolean statusAtividade;
+
+    @OneToMany(mappedBy = "clube")
+    private List<ClubePartida> clubePartidas;
 
 
 }
