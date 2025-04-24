@@ -4,8 +4,7 @@ import jakarta.validation.constraints.NotNull;
 
 public class ClubePartidaRequestDTO {
 
-    @NotNull(message = "Id não pode ter valor nulo.")
-    private ClubePartidaId id;
+
     private Long clubeId;
     private Long partidaId;
     private int gols;
@@ -14,20 +13,11 @@ public class ClubePartidaRequestDTO {
     public ClubePartidaRequestDTO() {
     }
 
-    public ClubePartidaRequestDTO(ClubePartidaId id, Long clubeId, Long partidaId, int gols, boolean mandante) {
-        this.id = id;
+    public ClubePartidaRequestDTO(Long clubeId, Long partidaId, int gols, boolean mandante) {
         this.clubeId = clubeId;
         this.partidaId = partidaId;
         this.gols = gols;
         this.mandante = mandante;
-    }
-
-    public ClubePartidaId getId() {
-        return id;
-    }
-
-    public void setId(ClubePartidaId id) {
-        this.id = id;
     }
 
     public Long getClubeId() {
