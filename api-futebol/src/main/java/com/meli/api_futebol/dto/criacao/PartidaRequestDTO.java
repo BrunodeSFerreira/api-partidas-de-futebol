@@ -6,27 +6,17 @@ import java.util.List;
 
 public class PartidaRequestDTO {
 
-    private Long id;
     private LocalDateTime dataHora;
     private Long estadioId;
     private List<ClubePartidaRequestDTO> clubeParticipantes;
 
-    public PartidaRequestDTO(Long id, LocalDateTime dataHora, Long estadioId, List<ClubePartidaRequestDTO> clubeParticipantes) {
-        this.id = id;
+    public PartidaRequestDTO(LocalDateTime dataHora, Long estadioId, List<ClubePartidaRequestDTO> clubeParticipantes) {
         this.dataHora = dataHora;
         this.estadioId = estadioId;
         this.clubeParticipantes = clubeParticipantes;
     }
 
     public PartidaRequestDTO() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public LocalDateTime getDataHora() {
