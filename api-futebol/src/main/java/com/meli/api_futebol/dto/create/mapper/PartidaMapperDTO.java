@@ -1,9 +1,8 @@
-package com.meli.api_futebol.dto.criacao.mapper;
+package com.meli.api_futebol.dto.create.mapper;
 
-import com.meli.api_futebol.dto.criacao.PartidaRequestDTO;
+import com.meli.api_futebol.dto.create.PartidaRequestDTO;
 import com.meli.api_futebol.model.ClubePartida;
 import com.meli.api_futebol.model.Estadio;
-import com.meli.api_futebol.model.EstadosBrasileiros;
 import com.meli.api_futebol.model.Partida;
 
 import java.util.List;

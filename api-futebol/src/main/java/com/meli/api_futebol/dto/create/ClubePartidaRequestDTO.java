@@ -1,6 +1,4 @@
-package com.meli.api_futebol.dto.criacao;
- import com.meli.api_futebol.model.ClubePartidaId;
-import jakarta.validation.constraints.NotNull;
+package com.meli.api_futebol.dto.create;
 
 public class ClubePartidaRequestDTO {
 

@@ -1,4 +1,4 @@
-package com.meli.api_futebol.dto.criacao;
+package com.meli.api_futebol.dto.create;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

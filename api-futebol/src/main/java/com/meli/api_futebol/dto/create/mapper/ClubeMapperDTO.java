@@ -1,5 +1,5 @@
-package com.meli.api_futebol.dto.criacao.mapper;
-import com.meli.api_futebol.dto.criacao.ClubeRequestDTO;
+package com.meli.api_futebol.dto.create.mapper;
+import com.meli.api_futebol.dto.create.ClubeRequestDTO;
 import com.meli.api_futebol.model.Clube;
 import com.meli.api_futebol.model.ClubePartida;
 

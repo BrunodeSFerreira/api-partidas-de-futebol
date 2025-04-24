@@ -1,4 +1,4 @@
-package com.meli.api_futebol.dto.criacao;
+package com.meli.api_futebol.dto.create;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.meli.api_futebol.model.EstadosBrasileiros;
 import jakarta.validation.constraints.NotNull;

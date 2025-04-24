@@ -1,6 +1,5 @@
-package com.meli.api_futebol.dto.criacao;
+package com.meli.api_futebol.dto.create;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
