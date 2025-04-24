@@ -23,5 +23,63 @@ public class Clube {
     @OneToMany(mappedBy = "clube")
     private List<ClubePartida> clubePartidas;
 
+    public Clube(Long id, String nomeClube, EstadosBrasileiros estadosBrasileiros, LocalDate dataCriacao, boolean statusAtividade, List<ClubePartida> clubePartidas) {
+        this.id = id;
+        this.nomeClube = nomeClube;
+        this.estadosBrasileiros = estadosBrasileiros;
+        this.dataCriacao = dataCriacao;
+        this.statusAtividade = true;
+        this.clubePartidas = clubePartidas;
+    }
 
+    public Clube() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNomeClube() {
+        return nomeClube;
+    }
+
+    public void setNomeClube(String nomeClube) {
+        this.nomeClube = nomeClube;
+    }
+
+    public EstadosBrasileiros getEstadosBrasileiros() {
+        return estadosBrasileiros;
+    }
+
+    public void setEstadosBrasileiros(EstadosBrasileiros estadosBrasileiros) {
+        this.estadosBrasileiros = estadosBrasileiros;
+    }
+
+    public LocalDate getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(LocalDate dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public boolean isStatusAtividade() {
+        return statusAtividade;
+    }
+
+    public void setStatusAtividade(boolean statusAtividade) {
+        this.statusAtividade = statusAtividade;
+    }
+
+    public List<ClubePartida> getClubePartidas() {
+        return clubePartidas;
+    }
+
+    public void setClubePartidas(List<ClubePartida> clubePartidas) {
+        this.clubePartidas = clubePartidas;
+    }
 }
