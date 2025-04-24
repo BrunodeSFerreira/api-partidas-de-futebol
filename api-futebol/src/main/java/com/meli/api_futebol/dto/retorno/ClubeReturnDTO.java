@@ -1,5 +1,6 @@
 package com.meli.api_futebol.dto.retorno;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.meli.api_futebol.model.EstadosBrasileiros;
 
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ public class ClubeReturnDTO {
     private Long id;
     private String nomeClube;
     private EstadosBrasileiros estadosBrasileiros;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataCriacao;
     private boolean statusAtividade;
     private List<ClubePartidaReturnDTO> clubePartidas;
