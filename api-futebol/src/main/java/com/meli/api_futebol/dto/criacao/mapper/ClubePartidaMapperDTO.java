@@ -10,7 +10,6 @@ public class ClubePartidaMapperDTO {
 
     public static ClubePartida toEntity(ClubePartidaRequestDTO dto, Clube clube, Partida partida) {
         ClubePartida clubePartida = new ClubePartida();
-        clubePartida.setId(dto.getId());
         clubePartida.setClube(clube);
         clubePartida.setPartida(partida);
         clubePartida.setGols(dto.getGols());
