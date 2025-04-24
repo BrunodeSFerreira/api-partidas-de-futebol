@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.meli.api_futebol.model.EstadosBrasileiros;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -16,7 +17,7 @@ public class ClubeRequestDTO {
     @NotNull(message = "É necessário informar o Estado de origem do clube.")
     private EstadosBrasileiros estadosBrasileiros;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @NotNull(message = "Necessário informar data de criação do Clube.")
     private LocalDate dataCriacao;
 
