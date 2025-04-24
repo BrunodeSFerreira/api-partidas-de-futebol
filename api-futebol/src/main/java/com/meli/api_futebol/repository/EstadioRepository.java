@@ -1,4 +1,7 @@
 package com.meli.api_futebol.repository;
 
-public interface EstadioRepository {
+import com.meli.api_futebol.model.Estadio;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EstadioRepository extends JpaRepository<Estadio, Long> {
 }

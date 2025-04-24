@@ -1,11 +1,11 @@
 package com.meli.api_futebol.model;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
+@Table(name = "CLUBE_PARTIDA ")
 public class ClubePartida {
 
     @EmbeddedId
