@@ -14,7 +14,6 @@ public class ClubeMapperDTO {
         clube.setNomeClube(dto.getNomeClube());
         clube.setEstadosBrasileiros(dto.getEstadosBrasileiros());
         clube.setDataCriacao(dto.getDataCriacao());
-        clube.setStatusAtividade(dto.isStatusAtividade());
 
         List<ClubePartida> partidaDTO = clube.getClubePartidas().stream().map(cp -> {
             ClubePartida clubePartida = new ClubePartida();
