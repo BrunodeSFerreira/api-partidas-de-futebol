@@ -20,17 +20,15 @@ public class ClubeRequestDTO {
     @NotNull(message = "Necessário informar data de criação do Clube.")
     private LocalDate dataCriacao;
 
-    private boolean statusAtividade;
     private List<ClubePartidaRequestDTO> clubePartidas;
 
     public ClubeRequestDTO() {
     }
 
-    public ClubeRequestDTO(String nomeClube, EstadosBrasileiros estadosBrasileiros, LocalDate dataCriacao, boolean statusAtividade, List<ClubePartidaRequestDTO> clubePartidas) {
+    public ClubeRequestDTO(String nomeClube, EstadosBrasileiros estadosBrasileiros, LocalDate dataCriacao, List<ClubePartidaRequestDTO> clubePartidas) {
         this.nomeClube = nomeClube;
         this.estadosBrasileiros = estadosBrasileiros;
         this.dataCriacao = dataCriacao;
-        this.statusAtividade = true;
         this.clubePartidas = clubePartidas;
     }
 
@@ -58,13 +56,6 @@ public class ClubeRequestDTO {
         this.dataCriacao = dataCriacao;
     }
 
-    public boolean isStatusAtividade() {
-        return statusAtividade;
-    }
-
-    public void setStatusAtividade(boolean statusAtividade) {
-        this.statusAtividade = statusAtividade;
-    }
 
     public List<ClubePartidaRequestDTO> getClubePartidas() {
         return clubePartidas;
