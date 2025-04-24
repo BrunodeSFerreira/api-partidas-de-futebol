@@ -25,6 +25,9 @@ public class ClubeReturnDTO {
         this.clubePartidas = clubePartidas;
     }
 
+    public ClubeReturnDTO() {
+    }
+
     public Long getId() {
         return id;
     }
