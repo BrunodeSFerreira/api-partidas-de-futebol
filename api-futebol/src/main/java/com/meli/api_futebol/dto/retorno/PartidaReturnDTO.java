@@ -21,6 +21,9 @@ public class PartidaReturnDTO {
         this.clubesParticipantes = clubesParticipantes;
     }
 
+    public PartidaReturnDTO() {
+    }
+
     public Long getId() {
         return id;
     }
