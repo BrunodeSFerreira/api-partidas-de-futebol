@@ -26,7 +26,7 @@ public class EstadioCadastroServiceImpl implements iEstadioCadastroService {
                 .collect(Collectors.toList());
         if (!listaEstadios.isEmpty()) {
             log.error("[Erro] Estádio de nome {} já cadastrado.", estadio.getNomeEstadio());
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Estadio " + estadio.getNomeEstadio() + "já cadastrado!");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Estadio " + estadio.getNomeEstadio() + " já cadastrado!");
         }
         if (estadio.getNomeEstadio().length() < 3) {
             log.error("[Erro] Nome do Estádio não pode ter menos que três caracteres.");
