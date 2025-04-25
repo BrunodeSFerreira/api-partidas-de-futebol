@@ -17,6 +17,7 @@ public class ClubePartidaReturnDTO {
     public ClubePartidaReturnDTO() {
     }
 
+
     public Long getClubeId() {
         return clubeId;
     }
