@@ -4,6 +4,6 @@ import com.meli.api_futebol.model.Estadio;
 
 public interface iEstadioCadastroService {
 
-    Estadio salvar(Estadio estadio);
+    Estadio salvarEstadio(Estadio estadio);
 
 }
