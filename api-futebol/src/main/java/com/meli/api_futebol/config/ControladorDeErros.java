@@ -2,6 +2,7 @@ package com.meli.api_futebol.config;
 
 import com.meli.api_futebol.exception.ErroPadrao;
 import com.meli.api_futebol.exception.ObjetoNaoEncontradoException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @ControllerAdvice
 public class ControladorDeErros {
 
@@ -28,6 +30,7 @@ public class ControladorDeErros {
         ErroPadrao erroPadrao = new ErroPadrao();
         erroPadrao.setDataHora(LocalDateTime.now());
         erroPadrao.setMensagem(ex.getMessage());
+        log.error("[Erro] {}", ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(erroPadrao);
     }
 
@@ -43,6 +46,8 @@ public class ControladorDeErros {
             erros.put(campo, mensagemErroCampo);
         });
         erroPadrao.setErrors(erros);
+
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(erroPadrao);
     }
+
 }
