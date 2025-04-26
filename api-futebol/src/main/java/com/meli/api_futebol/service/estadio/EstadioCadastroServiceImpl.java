@@ -25,14 +25,12 @@ public class EstadioCadastroServiceImpl implements iEstadioCadastroService {
                 .filter(estadio1 -> estadio1.getNomeEstadio().equalsIgnoreCase(estadio.getNomeEstadio()))
                 .collect(Collectors.toList());
         if (!listaEstadios.isEmpty()) {
-            log.error("[Erro] Estádio de nome {} já cadastrado.", estadio.getNomeEstadio());
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Estadio " + estadio.getNomeEstadio() + " já cadastrado!");
         }
         if (estadio.getNomeEstadio().length() < 3) {
-            log.error("[Erro] Nome do Estádio não pode ter menos que três caracteres.");
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Nome do Estádio não pode ter menos que três caracteres.");
         }
-
+        log.info("Salvando Estádio com sucesso!");
         return estadioRepository.save(estadio);
     }
 }
