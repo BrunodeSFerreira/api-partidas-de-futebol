@@ -16,4 +16,11 @@ public class EstadioMapperDTO {
         return estadio;
     }
 
+    public static Estadio toEntity(Long id, EstadioRequestDTO dto) {
+        Estadio estadio = new Estadio();
+        estadio.setId(id);
+        estadio.setNomeEstadio(dto.getNomeEstadio());
+        return estadio;
+    }
+
 }
