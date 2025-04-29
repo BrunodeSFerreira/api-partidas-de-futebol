@@ -1,5 +1,6 @@
 package com.meli.api_futebol.dto.create;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class PartidaRequestDTO {
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDateTime dataHora;
     private Long estadioId;
     private List<ClubePartidaRequestDTO> clubeParticipantes;
