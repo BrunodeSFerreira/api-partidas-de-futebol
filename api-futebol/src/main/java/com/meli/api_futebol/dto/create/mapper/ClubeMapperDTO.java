@@ -15,20 +15,17 @@ public class ClubeMapperDTO {
         clube.setEstadosBrasileiros(dto.getEstadosBrasileiros());
         clube.setDataCriacao(dto.getDataCriacao());
 
-        List<ClubePartida> partidaDTO = clube.getClubePartidas().stream().map(cp -> {
-            ClubePartida clubePartida = new ClubePartida();
-            clubePartida.setId(cp.getId());
-            clubePartida.setClube(cp.getClube());
-            clubePartida.setPartida(cp.getPartida());
-            clubePartida.setGols(cp.getGols());
-            clubePartida.setMandante(cp.isMandante());
-            return clubePartida;
-        }).collect(Collectors.toList());
-
-        clube.setClubePartidas(partidaDTO);
-
         return clube;
     }
 
+    public static Clube toEntity(Long id, ClubeRequestDTO dto) {
+
+        Clube clube = new Clube();
+        clube.setNomeClube(dto.getNomeClube());
+        clube.setEstadosBrasileiros(dto.getEstadosBrasileiros());
+        clube.setDataCriacao(dto.getDataCriacao());
+
+        return clube;
+    }
 
 }
