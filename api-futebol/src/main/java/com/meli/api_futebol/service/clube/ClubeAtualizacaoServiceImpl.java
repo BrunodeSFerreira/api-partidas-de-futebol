@@ -47,7 +47,6 @@ public class ClubeAtualizacaoServiceImpl implements iClubeAtualizacaoService{
     public Clube editarEstado(Long id, Clube estado) {
         Clube clubeCadastrado = buscarClubePorId(id);
 
-        // Verificação da validade do estado
         if (!Arrays.stream(EstadosBrasileiros.values()).anyMatch(
                 estadosBrasileiros -> estadosBrasileiros.equals(estado.getEstadosBrasileiros())
         )) {
