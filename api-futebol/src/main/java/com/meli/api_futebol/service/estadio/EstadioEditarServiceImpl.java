@@ -37,7 +37,7 @@ public class EstadioEditarServiceImpl implements iEstadioEditarService{
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "O nome do Estádio deve conter no mínimo 3 letras.");
         }
 
-        log.info("Nome editado com sucesso.");
+        //log.info("Nome editado com sucesso.");
         return estadioRepository.save(estadio);
     }
 }
