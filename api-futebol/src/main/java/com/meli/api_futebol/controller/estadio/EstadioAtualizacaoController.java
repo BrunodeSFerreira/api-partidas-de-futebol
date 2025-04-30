@@ -16,7 +16,6 @@ public class EstadioAtualizacaoController {
 
     private final EstadioEditarServiceImpl estadioEditarService;
 
-
     @PutMapping("/{id}")
     public ResponseEntity<Estadio> atualizarNomeEstadio(@PathVariable Long id, @RequestBody EstadioRequestDTO estadio) {
         Estadio estadioEntity = EstadioMapperDTO.toEntity(id, estadio);
