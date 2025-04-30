@@ -30,4 +30,7 @@ public class ClubeReturnMapperDTO {
         clubeReturnDTO.setClubePartidas(clubePartidaDTO);
         return clubeReturnDTO;
     }
+
+
+
 }
