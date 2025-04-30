@@ -25,6 +25,7 @@ public class ClubeDeleteServiceImpl implements iClubeDeleteService {
             Clube clube = optionalClube.get();
             clube.setStatusAtividade(false);
             clubeRepository.save(clube);
+            log.info("Inativando clube {}", id);
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Clube não encontrado.");
         }
