@@ -25,4 +25,35 @@ public class Partida {
     @OneToMany(mappedBy = "partida")
     private List<ClubePartida> clubesParticipates;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
+
+    public Estadio getEstadio() {
+        return estadio;
+    }
+
+    public void setEstadio(Estadio estadio) {
+        this.estadio = estadio;
+    }
+
+    public List<ClubePartida> getClubesParticipates() {
+        return clubesParticipates;
+    }
+
+    public void setClubesParticipates(List<ClubePartida> clubesParticipates) {
+        this.clubesParticipates = clubesParticipates;
+    }
 }
