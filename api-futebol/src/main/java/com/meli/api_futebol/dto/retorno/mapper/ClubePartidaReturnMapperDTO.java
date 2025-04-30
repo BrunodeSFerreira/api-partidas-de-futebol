@@ -8,8 +8,9 @@ public class ClubePartidaReturnMapperDTO {
 
     public static ClubePartidaReturnDTO entityToDTO(ClubePartida clubePartida) {
         ClubePartidaReturnDTO clubePartidaReturnDTO = new ClubePartidaReturnDTO();
-        clubePartidaReturnDTO.setClubeId(clubePartida.getId().getClubeId());
-        clubePartidaReturnDTO.setPartidaId(clubePartida.getId().getPartidaId());
+
+        clubePartidaReturnDTO.setClubeId(clubePartida.getClubeId());
+        clubePartidaReturnDTO.setPartidaId(clubePartida.getPartidaId());
         clubePartidaReturnDTO.setGols(clubePartida.getGols());
         clubePartidaReturnDTO.setMandante(clubePartida.isMandante());
 
