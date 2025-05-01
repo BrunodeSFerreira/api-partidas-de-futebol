@@ -1,5 +1,6 @@
 package com.meli.api_futebol.model;
 
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -8,6 +9,7 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "ESTADIO")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Estadio {
 
     @Id
@@ -15,7 +17,7 @@ public class Estadio {
     private Long id;
     @Column(nullable = false)
     private String nomeEstadio;
-
+    @JsonManagedReference
     @OneToMany(mappedBy = "estadio")
     private List<Partida> partidas;
 
