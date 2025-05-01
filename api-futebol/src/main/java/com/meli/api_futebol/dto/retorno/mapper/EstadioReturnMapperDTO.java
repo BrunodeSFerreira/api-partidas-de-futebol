@@ -15,7 +15,7 @@ public class EstadioReturnMapperDTO {
         estadioReturnDTO.setNomeEstadio(estadio.getNomeEstadio());
 
 
-        List<PartidaReturnDTO> partidaReturnDTOS = estadio.getPartidas().stream().map( partida ->
+       /*List<PartidaReturnDTO> partidaReturnDTOS = estadio.getPartidas().stream().map( partida ->
                 {
                     PartidaReturnDTO partidaReturnDTO = new PartidaReturnDTO();
                     partidaReturnDTO.setId(partida.getId());
@@ -24,7 +24,7 @@ public class EstadioReturnMapperDTO {
                     return partidaReturnDTO;
                 }
                 ).collect(Collectors.toList());
-        estadioReturnDTO.setPartidas(partidaReturnDTOS);
+        estadioReturnDTO.setPartidas(partidaReturnDTOS);*/
         return estadioReturnDTO;
     }
 
