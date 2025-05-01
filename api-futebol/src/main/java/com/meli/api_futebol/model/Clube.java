@@ -1,9 +1,12 @@
 package com.meli.api_futebol.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -20,8 +23,8 @@ public class Clube {
     private LocalDate dataCriacao;
     private boolean statusAtividade = true;
 
-    @OneToMany(mappedBy = "clube")
-    private List<ClubePartida> clubePartidas;
+    @OneToMany(mappedBy = "clube", cascade = CascadeType.ALL)
+    private List<ClubePartida> clubePartidas = Collections.synchronizedList(new ArrayList<>());
 
     public Long getId() {
         return id;
