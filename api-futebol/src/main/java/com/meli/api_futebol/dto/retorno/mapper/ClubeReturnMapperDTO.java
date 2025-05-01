@@ -15,22 +15,19 @@ public class ClubeReturnMapperDTO {
         clubeReturnDTO.setDataCriacao(clube.getDataCriacao());
         clubeReturnDTO.setStatusAtividade(clube.isStatusAtividade());
 
-        List<ClubePartidaReturnDTO> clubePartidaDTO = clube.getClubePartidas().stream()
+        List<ClubePartidaReturnDTO> clubePartidasDTO = clube.getClubePartidas().stream()
                 .map(cp -> {
                     ClubePartidaReturnDTO clubePartidaReturnDTO = new ClubePartidaReturnDTO();
-                    clubePartidaReturnDTO.setClubeId(cp.getId().getClubeId());
-                    clubePartidaReturnDTO.setPartidaId(cp.getId().getPartidaId());
+                    clubePartidaReturnDTO.setId(cp.getId());
+                    clubePartidaReturnDTO.setClubeId(cp.getClube().getId());
+                    clubePartidaReturnDTO.setPartidaId(cp.getPartida().getId());
                     clubePartidaReturnDTO.setGols(cp.getGols());
                     clubePartidaReturnDTO.setMandante(cp.isMandante());
-
                     return clubePartidaReturnDTO;
                 })
                 .collect(Collectors.toList());
 
-        clubeReturnDTO.setClubePartidas(clubePartidaDTO);
+        clubeReturnDTO.setClubePartidas(clubePartidasDTO);
         return clubeReturnDTO;
     }
-
-
-
 }
