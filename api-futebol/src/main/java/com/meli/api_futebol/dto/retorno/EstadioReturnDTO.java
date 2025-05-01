@@ -6,12 +6,12 @@ public class EstadioReturnDTO {
 
     private Long id;
     private String nomeEstadio;
-    private List<PartidaReturnDTO> partidas;
+    //private List<PartidaReturnDTO> partidas;
 
-    public EstadioReturnDTO(Long id, String nomeEstadio, List<PartidaReturnDTO> partidas) {
+    public EstadioReturnDTO(Long id, String nomeEstadio) {
         this.id = id;
         this.nomeEstadio = nomeEstadio;
-        this.partidas = partidas;
+
     }
 
     public EstadioReturnDTO() {
@@ -33,11 +33,5 @@ public class EstadioReturnDTO {
         this.nomeEstadio = nomeEstadio;
     }
 
-    public List<PartidaReturnDTO> getPartidas() {
-        return partidas;
-    }
 
-    public void setPartidas(List<PartidaReturnDTO> partidas) {
-        this.partidas = partidas;
-    }
 }
