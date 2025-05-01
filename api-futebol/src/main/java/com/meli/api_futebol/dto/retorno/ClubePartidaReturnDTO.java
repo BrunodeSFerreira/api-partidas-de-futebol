@@ -1,13 +1,18 @@
 package com.meli.api_futebol.dto.retorno;
 
+import jakarta.persistence.Id;
+
 public class ClubePartidaReturnDTO {
+
+    private Long id;
 
     private Long clubeId;
     private Long partidaId;
     private int gols;
     private boolean mandante;
 
-    public ClubePartidaReturnDTO(Long clubeId, Long partidaId, int gols, boolean mandante) {
+    public ClubePartidaReturnDTO(Long id, Long clubeId, Long partidaId, int gols, boolean mandante) {
+        this.id = id;
         this.clubeId = clubeId;
         this.partidaId = partidaId;
         this.gols = gols;
@@ -17,6 +22,13 @@ public class ClubePartidaReturnDTO {
     public ClubePartidaReturnDTO() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Long getClubeId() {
         return clubeId;
