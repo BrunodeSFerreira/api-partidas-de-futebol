@@ -4,20 +4,15 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PartidaRequestDTO {
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    //@JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDateTime dataHora;
     private Long estadioId;
-    private List<ClubePartidaRequestDTO> clubeParticipantes;
-
-    public PartidaRequestDTO(LocalDateTime dataHora, Long estadioId, List<ClubePartidaRequestDTO> clubeParticipantes) {
-        this.dataHora = dataHora;
-        this.estadioId = estadioId;
-        this.clubeParticipantes = clubeParticipantes;
-    }
+    private List<ClubePartidaRequestDTO> clubeParticipantes = new ArrayList<>();
 
     public PartidaRequestDTO() {
     }
