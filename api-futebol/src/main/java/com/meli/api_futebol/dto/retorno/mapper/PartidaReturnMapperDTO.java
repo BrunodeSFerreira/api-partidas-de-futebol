@@ -15,21 +15,19 @@ public class PartidaReturnMapperDTO {
         partidaReturnDTO.setDataHora(partida.getDataHora());
         partidaReturnDTO.setEstadioId(partida.getEstadio().getId());
 
-        List<ClubePartidaReturnDTO> clubePartidaReturnDTO = partida.getClubesParticipates().stream()
+        List<ClubePartidaReturnDTO> clubePartidasDTO = partida.getClubesParticipates().stream()
                 .map(cp -> {
-                    ClubePartidaReturnDTO clubePartidaReturn = new ClubePartidaReturnDTO();
-
-                    clubePartidaReturn.setClubeId(cp.getId().getClubeId());
-                    clubePartidaReturn.setPartidaId(cp.getId().getPartidaId());
-                    clubePartidaReturn.setGols(cp.getGols());
-                    clubePartidaReturn.setMandante(cp.isMandante());
-
-                    return clubePartidaReturn;
+                    ClubePartidaReturnDTO clubePartidaReturnDTO = new ClubePartidaReturnDTO();
+                    clubePartidaReturnDTO.setId(cp.getId());
+                    clubePartidaReturnDTO.setClubeId(cp.getClube().getId());
+                    clubePartidaReturnDTO.setPartidaId(cp.getPartida().getId());
+                    clubePartidaReturnDTO.setGols(cp.getGols());
+                    clubePartidaReturnDTO.setMandante(cp.isMandante());
+                    return clubePartidaReturnDTO;
                 })
                 .collect(Collectors.toList());
 
-        partidaReturnDTO.setClubesParticipantes(clubePartidaReturnDTO);
-
+        partidaReturnDTO.setClubesParticipantes(clubePartidasDTO);
         return partidaReturnDTO;
     }
 }
