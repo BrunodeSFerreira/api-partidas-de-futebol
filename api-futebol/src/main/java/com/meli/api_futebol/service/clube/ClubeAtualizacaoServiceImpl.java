@@ -61,7 +61,7 @@ public class ClubeAtualizacaoServiceImpl implements iClubeAtualizacaoService{
     public Clube editarDataCriacao(Long id, Clube clube) {
         Clube clubeCadastrado = buscarClubePorId(id);
 
-        if (clube.getDataCriacao().isAfter(LocalDate.now())) {
+        if (clube.getDataCriacao().isAfter(LocalDateTime.now())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Data de criação não pode ser posterior à data atual.");
         }
 

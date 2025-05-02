@@ -9,7 +9,7 @@ import java.util.List;
 public class PartidaReturnDTO {
 
     private Long id;
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime dataHora;
     private Long estadioId;
     private List<ClubePartidaReturnDTO> clubesParticipantes;

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class ClubeCadastroServiceImpl implements iClubeCadastroService {
                     + clube.getEstadosBrasileiros().getNome());
         }
 
-        if (clube.getDataCriacao().isAfter(LocalDate.now())){
+        if (clube.getDataCriacao().isAfter(LocalDateTime.now())){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Não é permitido inserir data posterior à data atual.");
         }
 

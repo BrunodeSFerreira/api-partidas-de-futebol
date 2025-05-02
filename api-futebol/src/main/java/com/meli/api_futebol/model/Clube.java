@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -20,7 +21,7 @@ public class Clube {
     @Column(nullable = false)
     private String nomeClube;
     private EstadosBrasileiros estadosBrasileiros;
-    private LocalDate dataCriacao;
+    private LocalDateTime dataCriacao;
     private boolean statusAtividade = true;
 
     @OneToMany(mappedBy = "clube", cascade = CascadeType.ALL)
@@ -50,11 +51,11 @@ public class Clube {
         this.estadosBrasileiros = estadosBrasileiros;
     }
 
-    public LocalDate getDataCriacao() {
+    public LocalDateTime getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(LocalDate dataCriacao) {
+    public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 

@@ -4,19 +4,20 @@ import com.meli.api_futebol.model.EstadosBrasileiros;
 
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class ClubeRequestDTO {
 
     private String nomeClube;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private EstadosBrasileiros estadosBrasileiros;
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate dataCriacao;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm")
+    private LocalDateTime dataCriacao;
 
     public ClubeRequestDTO() {
     }
 
-    public ClubeRequestDTO(String nomeClube, EstadosBrasileiros estadosBrasileiros, LocalDate dataCriacao) {
+    public ClubeRequestDTO(String nomeClube, EstadosBrasileiros estadosBrasileiros, LocalDateTime dataCriacao) {
         this.nomeClube = nomeClube;
         this.estadosBrasileiros = estadosBrasileiros;
         this.dataCriacao = dataCriacao;
@@ -39,11 +40,11 @@ public class ClubeRequestDTO {
         this.estadosBrasileiros = estadosBrasileiros;
     }
 
-    public LocalDate getDataCriacao() {
+    public LocalDateTime getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(LocalDate dataCriacao) {
+    public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 
