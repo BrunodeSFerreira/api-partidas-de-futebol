@@ -4,6 +4,7 @@ import com.meli.api_futebol.dto.retorno.ClubeReturnDTO;
 import com.meli.api_futebol.model.Clube;
 import com.meli.api_futebol.model.ClubePartida;
 import com.meli.api_futebol.model.EstadosBrasileiros;
+import com.meli.api_futebol.model.Partida;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jdbc.repository.query.Query;
@@ -22,5 +23,6 @@ public interface ClubeRepository extends JpaRepository<Clube, Long> {
     Page<Clube> findByEstadosBrasileirosAndStatusAtividadeTrue(EstadosBrasileiros estado, Pageable pageable);
 
     Page<Clube> findByStatusAtividade(boolean status, Pageable pageable);
+
 
 }

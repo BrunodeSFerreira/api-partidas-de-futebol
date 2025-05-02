@@ -1,4 +1,4 @@
-package com.meli.api_futebol.controller.partida;
+package com.meli.api_futebol.dto.retorno.mapper.partida;
 
 import com.meli.api_futebol.dto.create.PartidaRequestDTO;
 import com.meli.api_futebol.model.Partida;
